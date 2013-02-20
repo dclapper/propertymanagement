@@ -11,7 +11,43 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130219184441) do
+ActiveRecord::Schema.define(:version => 20130219191249) do
+
+  create_table "leases", :force => true do |t|
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "rent"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "properties", :force => true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "repair_requests", :force => true do |t|
+    t.date     "open_date"
+    t.date     "close_date"
+    t.text     "request_details"
+    t.text     "request_response"
+    t.integer  "submitter_id"
+    t.integer  "responder_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  create_table "units", :force => true do |t|
+    t.string   "name"
+    t.integer  "square_feet"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "username"

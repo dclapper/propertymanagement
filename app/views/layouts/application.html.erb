@@ -8,7 +8,43 @@
 </head>
 <body>
 
-<%= yield %>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+	
+	<!-- Begin Header -->
+	<div id="header">
+		
+		This is the header
+		
+	</div>
+	<!-- End Header -->
+	
+	<!-- Begin Navigation -->
+	<div id="navigation">
+		
+		<%= link_to 'Home', users_path %>
+		
+	</div>
+	<!-- End Navigation -->
+	
+	<!-- Begin Lef Column -->
+	<div id="leftcolumn">
+			
+			<%= yield %>
+		
+	</div>
+	<!-- End Left Column -->
+	
+	<!-- Begin Footer -->
+	<div id="footer">
+		
+		This is the footer
+		
+	</div>
+	<!-- End Footer -->
+	
+</div>
+<!-- End Wrapper -->
 
 </body>
 </html>

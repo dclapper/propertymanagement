@@ -1,5 +1,19 @@
 Propertymanagement::Application.routes.draw do
+  resources :repair_requests
+
+
+  resources :leases
+
+
+  resources :units
+
+
+  resources :properties
+
+
   resources :users
+  
+  root :to => 'users#index'
 
 
   # The priority is based upon order of creation:
